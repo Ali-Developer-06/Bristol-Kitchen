@@ -523,7 +523,7 @@ footer a{
     .swiper-slide{
         height: 350px;
         width: 300px !important;
-        margin: 0 40px;
+/*         margin: 0 40px; */
     }
     .giftVoucher{
         padding: 20px;
