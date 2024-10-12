@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans 3", sans-serif;
+}
+:root{
+    --header-color: #F4F1EF;
+    --dark-color: #6F5243;
+    --black-color: #000;
+    --white-color: #ffffff;
+}
+.container{
+    padding: 0 50px;
+}
+hr{
+    display: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Fjalla One", sans-serif;
+}
+p{
+    font-weight: 400;
+}
+
+/** <-- ===== Header Section ===== --> */
+
+.navbar{
+    height: 50px;
+    display: flex;
+    padding: 10px 30px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header-color);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.brending{
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--dark-color);
+    text-transform: uppercase;
+    font-family: "Fjalla One", sans-serif;
+}
+.nav_menu{
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.nav_item{
+    list-style: none;
+}
+.nav_link{
+    color: gray;
+    padding:0 20px;
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav_link.active{
+    font-weight: 700;
+    color: var(--black-color);
+}
+.headNumber h2{
+    font-weight: 500;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    display: block;
+    background-color: #000;
+    transition:all 0.3s ease-out;
+}
+
+
+/** <-- ===== Main Section ===== --> */
+
+
+.main{
+    height: 65vh;
+    position: relative;
+    background: url(Images/main.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.bookNow{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+    position: absolute;
+    right: 8%; bottom: -10%;
+    background-color: var(--dark-color);
+}
+.bookNow h1{
+    font-size: 44px;
+    color: var(--white-color);
+}
+.bookNow a{
+    font-weight: 600;
+    margin: 10px 0 0;
+    padding: 15px 30px;
+    border-radius: 2px;
+    text-decoration: none;
+    color: var(--black-color);
+    background-color: var(--white-color);
+}
+
+
+/** <-- ===== Review Section ===== --> */
+
+.review{
+    width: 100%;
+    height: 120vh;
+    text-align: center;
+    background: url(Images/review.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.reviewMain{
+    width: 100%;
+    height: 120vh;
+    background-color: #00000048;
+}
+.reviewHeading{
+    font-size: 42px;
+    font-weight: 500;
+    padding: 50px 0 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+.reviewBox{
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    color: var(--white-color);
+}
+.reviewBoxLeft{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.reviewBoxLeft img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50pc;
+}
+.reviewBoxLeft h1{
+    font-size: 42px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.reviewBoxRight{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.reviewStars i{
+    color: #FFBF0B;
+}
+.reviewStars .lastStar{
+    color: #E0E0E0;
+}
+.reviewBoxRight p:first-child{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.swiper{
+    width: 90%;
+    height: 75vh;
+    margin: 50px auto;
+}
+.swiper-slide{
+    height: 350px;
+    padding: 20px;
+    width: 300px !important;
+    background-color: var(--white-color);
+}
+.swiper-slide .reviewStars{
+    margin: 20px 0;
+}
+.swiperImg img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+.sliderFooter{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+.sliderFooter img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+.swiper-pagination-bullet{
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 50px 5px 0;
+    background-color: #ddd; 
+    transition: background-color 0.3s ease;
+}
+.swiper-pagination-bullet-active{
+    transform: scale(1.3);
+    background-color: #fff;
+}
+
+
+/** <-- ===== Social Section ===== --> */
+
+
+.social{
+    padding: 50px 0;
+    text-align: center;
+}
+.socialHeading{
+    font-size: 40px;
+    font-weight: 400;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+.socialImg a{
+    text-decoration: none;
+}
+.socialImg img{
+    width: 40px;
+    height: 40px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.giftVoucher{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 25px 75px 0;
+}
+.giftVoucherImg{
+    width: 50%;
+}
+.giftVoucherImg img{
+    width: 100%;
+    border-radius: 4px;
+}
+.giftVoucherContent{
+    padding: 0 25px 0;
+}
+.giftVoucherContent h1{
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+/** <-- ===== Visit Section ===== --> */
+
+
+.visit{
+    display: flex;
+    padding: 50px 50px 0;
+}
+.visitHeading{
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+.contact-form{
+    width: 50%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+}
+.contactPage{
+    margin: 50px auto;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+}
+.contactHeading{
+    padding: 20px 0;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.form-group{
+    position: relative;
+    margin-bottom: 20px;
+}
+.form-group input{
+    width: 95%;
+    outline: none;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    background-color: rgba(211, 211, 211, 0.379);
+}
+.form-group label{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #888;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label{
+    top: 3px;
+    left: 10px;
+    color: #888;
+    padding: 0 5px;
+    font-size: 12px;
+}
+.form-group textarea{
+    width: 95%;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    background-color: rgba(211, 211, 211, 0.379);
+}
+.emailError{
+    color: red;
+    margin: -15px 5px 20px;
+}
+form button{
+    width: 100%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px 0;
+    font-size: 16px;
+    transition: 1s all ease-in-out;
+    background-color: var(--dark-color);
+    box-shadow: 6px 6px 1px 1px rgba(0, 0, 0, .6);
+}
+form button:hover{
+    box-shadow: none;
+    transition: 1s all ease-in-out;
+}
+.recaptcha{
+    color: #888;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 12px;
+}
+.visitContent{
+    width: 50%;
+    padding: 0 0 0 50px;
+}
+select{
+    font-size: 16px;
+    padding: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;;
+}
+option{
+    padding: 10px;
+}
+.highlight{
+    font-weight: bold;
+}
+
+
+/** <-- ===== Site Map Section ===== --> */
+
+
+.siteMap{
+    padding: 50px 0 0;
+}
+
+
+/** <-- ===== Footer Section ===== --> */
+
+footer{
+    display: flex;
+    padding: 75px 50px;
+    align-items: center;
+    color: var(--white-color);
+    justify-content: space-between;
+    background-color: var(--dark-color);
+}
+footer a{
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+
+/*todo <-- ========= Open Hour Page ========= --> */
+
+.openHours{
+    width: 100%;
+    height: 100vh;
+}
+.OpenHourcontainer{
+    padding: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 8px;
+    background-color: var(--header-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.openHourHeading{
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.schedule-list{
+    padding: 0;
+    list-style: none;
+}
+.schedule-item{
+    display: flex;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+.schedule-item:last-child{
+    border-bottom: none;
+}
+.day-name{
+    color: #333;
+    font-weight: bold;
+}
+.time-range{
+    color: #555;
+}
+.openHourHighlight, .openHourHighlight *{
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    color: #fff !important;
+    background-color: var(--dark-color);
+}
+
+
+
+
+/*todo <-- ====== Media Query ====== --> */
+
+
+@media (max-width:768px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav_menu{
+        position: absolute;
+        top: 0; left: -100%;
+        width: 100%;
+        height: 100vh;
+        transition: 1s;
+        flex-direction: column;
+        color: var(--black-color);
+        background-color: var(--white-color);
+        z-index: 999;
+    }
+    .nav_item{
+        margin: 10px 0;
+    }
+    .nav_menu.active{
+        left: 0;
+    }
+    hr{
+        width: 90%;
+        margin: 0 10px;
+        display: block;
+    }
+
+    .bookNow{
+        width: 250px;
+        height: 250px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .bookNow h1{
+        font-size: 30px;
+    }
+    .bookNow a{
+        padding: 10px 20px;
+    }
+    .review,
+    .reviewMain{
+        height: 130vh;
+    }
+    .swiper-slide{
+        height: 350px;
+        width: 300px !important;
+        margin: 0 40px;
+    }
+    .giftVoucher{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .giftVoucherImg,
+    .giftVoucherContent,
+    .contact-form,
+    .visitContent{
+        width: 100%;
+    }
+    .giftVoucherContent h1{
+        padding: 30px 0;
+    }
+    .visit{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .form-group input,
+    .form-group textarea{
+        width: 90%;
+    }
+    form button{
+        width: 95%;
+    }
+    .visitContent{
+        padding: 20px;
+    }
+    footer{
+        padding: 75px 20px;
+        flex-direction: column;
+    }
+}

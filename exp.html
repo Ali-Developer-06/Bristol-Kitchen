@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Hours</title>
+  <style>
+
+    .OpenHourcontainer {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .openHourHeading{
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .schedule-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .schedule-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+      font-size: 18px;
+    }
+
+    .schedule-item:last-child {
+      border-bottom: none;
+    }
+
+    .day-name {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .time-range {
+      color: #555;
+    }
+
+    /* Highlighting today */
+    .highlight {
+      background-color: #ffeb3b;
+      border-radius: 4px;
+      padding: 15px;
+      font-weight: bold;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="OpenHourcontainer">
+    <h1 class="openHourHeading">Open Hours</h1>
+    <ul class="schedule-list">
+      <li class="schedule-item" data-day="Mon">
+        <span class="day-name">Monday</span>
+        <span class="time-range">12:00 – 22:00</span>
+      </li>
+      <li class="schedule-item" data-day="Tue">
+        <span class="day-name">Tuesday</span>
+        <span class="time-range">12:00 – 22:00</span>
+      </li>
+      <li class="schedule-item" data-day="Wed">
+        <span class="day-name">Wednesday</span>
+        <span class="time-range">12:00 – 22:00</span>
+      </li>
+      <li class="schedule-item" data-day="Thu">
+        <span class="day-name">Thursday</span>
+        <span class="time-range">12:00 – 22:00</span>
+      </li>
+      <li class="schedule-item" data-day="Fri">
+        <span class="day-name">Friday</span>
+        <span class="time-range">12:00 – 22:30</span>
+      </li>
+      <li class="schedule-item" data-day="Sat">
+        <span class="day-name">Saturday</span>
+        <span class="time-range">12:00 – 22:30</span>
+      </li>
+      <li class="schedule-item" data-day="Sun">
+        <span class="day-name">Sunday</span>
+        <span class="time-range">12:00 – 22:00</span>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    // Get current day in short form (e.g., "Mon", "Tue", etc.)
+    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const today = new Date();
+    const currentDay = days[today.getDay()];
+
+    // Select the schedule items
+    const scheduleItems = document.querySelectorAll('.schedule-item');
+
+    // Highlight today's schedule
+    scheduleItems.forEach(item => {
+      if (item.getAttribute('data-day') === currentDay) {
+        item.classList.add('openHourHighlight');
+      }
+    });
+  </script>
+
+</body>
+</html>
